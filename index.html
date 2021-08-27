@@ -2,6 +2,10 @@
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="en">
   <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="101317660375-qdtjsg4d63cf38vlmsb54gqdr2i3pagh.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -21,6 +25,9 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <a class="py-2 d-none d-md-inline-block" id="usuario" href=""></a>
+        <button type="button" class="btn btn-secondary" onclick="desconectar();">Salir</button>
+      
       </div>
     </nav>
     <main role="main">
@@ -105,5 +112,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/logout.js"></script>
   </body>
 </html>

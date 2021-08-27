@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Verdana:400,700);
+
+.body {
+  background:#f9f9fa;
+  font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+  background-color: #f9f9fa;
+}
+
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* acá había un triangulito pero lo eliminé*/
+
+
+.login-header {
+  background:#a4c43d;
+  padding: 20px;
+  font-size: 1.0em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:#f9f9fa;
+  ;
+
+}
+
+.login-container {
+  /*probando si queda la transparencia*/
+  color: transparent;
+  background-color: transparent;
+  padding: 20px;
+  margin-top: 0ch;
+}
+
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #000;
+}
+
+
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login button {
+  background: #a4c43d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  margin-left: 130px;
+}
+
+.login input[type="submit"]:hover {
+  background: #a4c43d;
+}
+
+
+.login input[type="submit"]:focus {
+  border-color:#a4c43d;
+}
+
+body {
+  /*pidiendo imagenes prestadas a ceibal :)*/
+  height:665px;
+  background-image: url("http://pimod.com/wp-content/uploads/2017/04/PLANCEIBAL.jpg");
+  background-repeat: no-repeat;
+  background-size: 85rem;
+}
