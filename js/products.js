@@ -5,7 +5,8 @@ var currentProductsArray = [];
 var currentSortCriteria = undefined;
 var minCount = undefined;
 var maxCount = undefined;
-var buscar = [];
+
+
 
 function sortProducts(criteria, array){
     let result = [];
@@ -36,11 +37,10 @@ function sortProducts(criteria, array){
     return result;
 }
 
-function showProductsList(){
-
-    let htmlContentToAppend = "";
-    for(let i = 0; i < currentProductsArray.length; i++){
-        let product = currentProductsArray[i];
+function showProductsList(productsArray){
+   let htmlContentToAppend = "";
+    for(let i = 0; i < productsArray.length; i++){
+        let product = productsArray[i];
 
         if (((minCount == undefined) || (minCount != undefined && parseInt(product.cost) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(product.cost) <= maxCount))){
@@ -83,15 +83,18 @@ function sortAndShowProducts(sortCriteria, productsArray){
     currentProductsArray = sortProducts(currentSortCriteria, currentProductsArray);
 
     //Muestro las categorías ordenadas
-    showProductsList();
+    showProductsList(currentProductsArray);
 }
 
-
+//Función que se ejecuta una vez que se haya lanzado el evento de
+//que el documento se encuentra cargado, es decir, se encuentran todos los
+//elementos HTML presentes.
 
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(PRODUCTS_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
-            sortAndShowProducts(ORDER_ASC_BY_NAME, resultObj.data);
+            sortAndShowProducts(ORDER_ASC_BY_NAME, resultObj.data); 
+
         }
     });
 
@@ -114,19 +117,9 @@ document.addEventListener("DOMContentLoaded", function(e){
         minCount = undefined;
         maxCount = undefined;
 
-        showProductsList();
+        showProductsList(currentProductsArray);
     });
 
-    document.getElementById("buscarproductos").addEventListener("keyup", function(){
-        var inputValor = document.getElementById("buscarproductos").value.toUpperCase();
-	var buscar =  resultObj.data.filter((product)=>{  
-		return resultObj.data.toUpperCase().includes(inputValor);
-	});
-	sortAndShowProducts(buscar)
-
-
-
-    });
 
     document.getElementById("rangeFilterCount").addEventListener("click", function(){
         //Obtengo el mínimo y máximo de los intervalos para filtrar por cantidad
@@ -148,6 +141,26 @@ document.addEventListener("DOMContentLoaded", function(e){
             maxCount = undefined;
         }
 
-        showProductsList();
+        showProductsList(currentProductsArray);
     });
+
+
+    document.getElementById("buscarproductos").addEventListener("keyup", function(){
+       search();
+      
+	});
+    
+
 });
+
+
+
+function search(){
+  
+  let inputValor = document.getElementById("buscarproductos").value;
+  let buscar =  currentProductsArray.filter((product)=>{  
+    return product.name.toUpperCase().includes(inputValor.toUpperCase());
+  });
+ 
+ showProductsList(buscar);
+}
