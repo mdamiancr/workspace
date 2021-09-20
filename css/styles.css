@@ -139,3 +139,9 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+
+/*zoom para las imagenes*/
+
+#flip:hover{-webkit-transform:scale(1.2);transform:scale(1.2);}
+#flip {overflow:hidden;}

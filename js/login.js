@@ -2,7 +2,7 @@ function verificar(){
     let nombre = document.getElementById("usuario");
     let email = document.getElementById("email");
     let usuario = {};
-    if (nombre.value.trim()===""|| email.value.trim()===""){
+    if (nombre.value.trim()===""|| email.value.trim()===""){ 
     alert("Completa los campos porfavor");
 }else {
     usuario.nombre = nombre.value;
