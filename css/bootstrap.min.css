@@ -12,41 +12,6 @@
 
 
 
-/*codigo css para las estrellas*/
-#form {
-    width: 250px;
-    margin: 0 auto;
-    height: 20px;
-  }
-  
-  #form p {
-    text-align: center;
-  }
-  
-  #form label {
-    font-size: 500px;
-  }
-  
-  input[type="radio"] {
-    display: none;
-  }
-  
-  label {
-    color: grey;
-  }
-  
-  .clasificacion {
-    direction:ltr;
-    unicode-bidi:bidi-override;
-  }
-  
-  label:hover,
-  label:hover ~ label {
-    color: orange;
-  }
-  
-  input[type="radio"]:checked ~ label {
-    color: orange;
-  }
+
   
   

@@ -14,10 +14,13 @@
   <link href="css/styles.css" rel="stylesheet">
   <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  
+
   
 
 </head>
+
+
+
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
@@ -26,11 +29,15 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" id="usuario" href=""></a>
-      <button  type="button" class="btn btn-secondary" onclick="desconectar();">Salir</button>
-    </div>
+      <a id="usuario" class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="cart.html"> Ver mi carrito</a></li>
+        <li><a href="#"> Mi perfil</a></li>
+        <li><a href="login.html">Cerrar sesión</a></li>
+      </ul>
+      </div>
   </nav>
+  
   <main role="main">
     <div class="container mt-5">
       <div class="text-center p-4">
@@ -41,19 +48,19 @@
       <!--
           inicio de descripción de productos
         -->
-
+      <div>
       <h3 id="productName"></h3>
       <hr class="my-3">
       <dl>
         <dt>Descripción</dt>
         <dd>
           <p id="productDescription"></p>
-        </dd>
+        </dd><br>
 
         <dt>Cantidad de productos</dt>
         <dd>
           <p id="productSoldCount"></p>
-        </dd>
+        </dd><br>
 
         <dt>Imágenes ilustrativas</dt>
         <dd>
@@ -61,6 +68,8 @@
           </div>
         </dd>
       </dl>
+      </div>
+
 
       <br>
       <hr>
@@ -68,7 +77,7 @@
       <div class="container"> 
         <form>
           <h5>Valora este producto:</h5></p>
-        <p class="clasificacion" class="rotateMe">
+        <p class="clasificacion">
           <h2>
             <input id="radio1" type="radio" name="estrella" value="5">
             <label for="radio1">★</label>
@@ -107,21 +116,37 @@
 
 
       
-      <!--llamando al ID con comentarios predefinidos-->
+      <!-- ID con comentarios predefinidos-->
       <div class="table table-bordered table-hover" id="comments"></div>
 
-      <div ALIGN ="center"><!--Agregando una animación-->
-      <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_rddfnr10.json" aling="center" background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-      </div><a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Volver a productos</a>
-    </div><!--botón Volver a productos-->
+      <br>
+      <p>  <!--Parrafo relacionados con icono de  similar txt-->
+
+        <h5><label>Productos relacionados <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
+          <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z"/>
+        </svg>
+        </label>
+        </h5>
+        </p>
+      
+        <div ALIGN ="center">
+          <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_jYTS0r.json"  background="#74BDC7"  speed="1"  style="width: 300px; height: 300px;" hover loop  autoplay></lottie-player>
+
+      <h5 id="relacion-products"></h5>
+
+      <br>
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Volver a productos</a>
+      </div><!--botón Volver a productos-->
   
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
-         <a href="#">Volver arriba</a> <!--Clikeable Volver arriba-->
+         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+        </svg></a> <!--Clikeable Volver arriba-->
         </p>
         
-        <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+        <p>Este sitio forma parte de Desarrollo Web - JAP - 2021</p>
         <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
       </div>
     </footer>

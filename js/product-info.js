@@ -80,8 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 //funcion publicar comentario propio
-
-
 function enviarComentario(){
     let comentario = {};
     let usuario = JSON.parse(localStorage.getItem('usuario'))
@@ -98,14 +96,12 @@ function enviarComentario(){
         comentar.push(comentario);
         document.getElementById("texto").value = "";
     }
-
-    
     showComment(comentar);
-    
-
 };
 
 
+
+//funcion calificar con estrellas
 function calificar(num){
 
     let estrella = "";

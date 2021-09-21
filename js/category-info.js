@@ -6,10 +6,10 @@ function showImagesGallery(array){
 
     for(let i = 0; i < array.length; i++){
         let imageSrc = array[i];
-
+//se agregó la Id "Flip" para darle zoom a las imagenes
         htmlContentToAppend += `
         <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
+            <div class="d-block mb-4 h-100" id="flip">
                 <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
             </div>
         </div>

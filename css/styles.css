@@ -1,5 +1,5 @@
 .jumbotron, .card-body, .container, .site-header{
-    font-family: 'Raleway', serif !important;
+    font-family: 'Arial Narrow Bold', sans-serif
 }
 
 .jumbotron .display-4{
@@ -64,11 +64,11 @@ footer p {
 }
 
 .site-header .dropdown-menu a {
-  color: black;
+  color: rgb(38, 152, 218);
 }
 
 .dropzone{
-  border: 2px dashed #0087F7;
+  border: 2px dashed rgba(38, 152, 218);
   border-radius: 5px;
   background: white;
 }
@@ -145,3 +145,99 @@ a.custom-card:hover {
 
 #flip:hover{-webkit-transform:scale(1.2);transform:scale(1.2);}
 #flip {overflow:hidden;}
+
+
+
+/*codigo css para las estrellas*/
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form p {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: rgb(255, 211, 14);
+}
+
+input[type="radio"]:checked ~ label {
+  color: rgb(255, 211, 14);
+}
+
+
+
+
+
+/*flecha gris*/
+nav .dropdown-menu:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 250px;
+  width: 0;
+  height: 0;
+  border-width: 0 25px 25px;
+  border-style: solid;
+  border-color: transparent transparent rgba(240, 232, 232, 0.349);
+}
+
+/* diseño del menu*/
+
+nav .dropdown-menu {
+
+  text-align: center;
+  background-color: rgba(243, 232, 232, 0.555);
+  
+
+  }
+
+ nav .dropdown-menu li{
+  display: inline-block;
+  padding: 12px 19px;
+  list-style: none;
+  border-top-right-radius: 20px;
+  
+
+   }
+
+ nav .dropdown-menu li a{
+
+   text-decoration:blanchedalmond;
+   color: rgb(255, 255, 255);
+   text-transform: uppercase;
+   font-family: 'Signika Negative', sans-serif;
+   font-size: 0.9em;
+   border-bottom:orangered;
+
+
+   }
+
+
+  nav .dropdown-menu li a:hover{
+
+     border-bottom: 2px solid rgba(38, 152, 218);
+     border-radius: 4px;
+
+   }
+
