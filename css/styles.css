@@ -213,7 +213,7 @@ nav .dropdown-menu {
   }
 
  nav .dropdown-menu li{
-  display: inline-block;
+  display: initial;
   padding: 12px 19px;
   list-style: none;
   border-top-right-radius: 20px;
