@@ -109,7 +109,7 @@ function calificar(num){
 
 for (let i = 1; i <= 5; i++) {
     if (i <= num) {
-        estrella += `<i class="fas fa-star"></i>`;
+        estrella += `⭐`;
     } else {
         estrella += `<i class="far fa-star"></i>`;
     };
@@ -118,5 +118,5 @@ return estrella;
 
 };
 
-//productos relacionados prueba
+
 
