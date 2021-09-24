@@ -1,4 +1,5 @@
 
+//array que recorre las imágenes del jSON.
 var productos = {};
 
 function showImagesGallery(array) {
@@ -27,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
             let productNameHTML = document.getElementById("productName");
             let productDescriptionHTML = document.getElementById("productDescription");
             let productSoldCountHTML = document.getElementById("productSoldCount");
-
-
+           
             productNameHTML.innerHTML = product.name;
             productDescriptionHTML.innerHTML = product.description;
             productSoldCountHTML.innerHTML = product.soldCount;
+            
 
             //mostrando las imagenes como galería
             showImagesGallery(product.images);
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //funcion publicar comentario propio
 function enviarComentario(){
     let comentario = {};
-    let usuario = JSON.parse(localStorage.getItem('usuario'))
+    let usuario = JSON.parse(localStorage.getItem('usuario'))//tomo los datos almacenados en #usuario
     let estrella =  document.querySelector("input[name=estrella]:checked").value;
     if (estrella > 0){
         estrella;
@@ -91,7 +92,7 @@ function enviarComentario(){
     comentario.user = usuario.nombre;
     comentario.score = estrella;
     comentario.description = document.getElementById("texto").value;
-    comentario.dateTime = new Date();
+    comentario.dateTime = new Date(); //objeto fecha
     if(comentario.description.trim() !==""){
         comentar.push(comentario);
         document.getElementById("texto").value = "";
@@ -116,4 +117,6 @@ for (let i = 1; i <= 5; i++) {
 return estrella;
 
 };
+
+//productos relacionados prueba
 

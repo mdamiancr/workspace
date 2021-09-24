@@ -10,7 +10,7 @@
   height: 50vh;
   padding: 5em inherit;
   margin-bottom: 0;
-  background-color: #53C0FB;
+  background-color: #197ad4;
   background: url('../img/cover_back.png');
   background-size: cover;
   background-position: center;
@@ -37,7 +37,6 @@
 .jumbotron .container {
   max-width: 40rem;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
   text-shadow: 1px 1px 2px grey;
 }
 
@@ -59,12 +58,14 @@ footer p {
   transition: ease-in-out color .15s;
 }
 
+
 .light-text {
   color: white;
 }
 
+/*color de las letras del menu*/
 .site-header .dropdown-menu a {
-  color: rgb(38, 152, 218);
+  color: rgb(255, 255, 255);
 }
 
 .dropzone{
@@ -136,6 +137,8 @@ a.custom-card:hover {
   text-decoration: inherit;
 }
 
+
+
 .checked {
   color: orange;
 }
@@ -193,13 +196,13 @@ input[type="radio"]:checked ~ label {
 nav .dropdown-menu:before {
   content: "";
   position: absolute;
-  top: -10px;
-  left: 250px;
+  top: -12px;
+  left: 140px;
   width: 0;
   height: 0;
-  border-width: 0 25px 25px;
-  border-style: solid;
-  border-color: transparent transparent rgba(240, 232, 232, 0.349);
+  border-width: 0 14px 14px; /*tamaño de la flecha*/
+  border-style:solid;
+  border-color: transparent transparent rgba(109, 102, 102, 0.568);
 }
 
 /* diseño del menu*/
@@ -207,37 +210,40 @@ nav .dropdown-menu:before {
 nav .dropdown-menu {
 
   text-align: center;
-  background-color: rgba(243, 232, 232, 0.555);
+  background-color: rgba(0, 0, 0, 0.541);
+  margin-top: 4.5px; /*separacion entre la barra negra y la caja de items*/
+  height:44px; /*altura*/
+  margin-right: -5px; /*distancia dedsde el margen derecho*/
   
 
   }
 
  nav .dropdown-menu li{
-  display: initial;
-  padding: 12px 19px;
+  display:initial;
+  padding: 15px 21px; /*medidas de la caja*/
   list-style: none;
-  border-top-right-radius: 20px;
-  
 
    }
 
  nav .dropdown-menu li a{
 
-   text-decoration:blanchedalmond;
+   text-decoration:rgb(219, 166, 19);
    color: rgb(255, 255, 255);
    text-transform: uppercase;
-   font-family: 'Signika Negative', sans-serif;
+   font-family:'Arial Narrow Bold', Arial, Helvetica, sans-serif;
    font-size: 0.9em;
-   border-bottom:orangered;
+   border-bottom:rgba(240, 239, 239, 0.753);
+   font-weight:500; /*grosor de letra en menú*/
+
 
 
    }
 
-
+/*color, grosor de linea señaladora carrito, mi perfil y salir*/
   nav .dropdown-menu li a:hover{
 
-     border-bottom: 2px solid rgba(38, 152, 218);
+     border-bottom: 2px solid rgb(255, 255, 255);
      border-radius: 4px;
-
    }
 
+  

@@ -14,14 +14,7 @@
   <link href="css/styles.css" rel="stylesheet">
   <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-  
-
 </head>
-
-
-
-
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
@@ -29,11 +22,11 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a id="usuario" class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
+      <a id="usuario" #="desplegable" class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="cart.html"> Ver mi carrito</a></li>
-        <li><a href="#"> Mi perfil</a></li>
-        <li><a href="login.html">Cerrar sesión</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="#">Mi perfil</a></li>
+        <li><a href="login.html">Salir</a></li>
       </ul>
       </div>
   </nav>
@@ -66,13 +59,10 @@
         <dd>
           <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
           </div>
+        </dd><br>
         </dd>
       </dl>
-      </div>
-
-
-      <br>
-      <hr>
+      </div><hr>
       <!--caja de comentarios y puntuación en el mismo form-->
       <div class="container"> 
         <form>
@@ -98,9 +88,9 @@
           <label><h5>Escribe un comentario</h5></label> <!--escribir el comentario-->
           <textarea id="texto" class="form-control" autocomplete="off" placeholder="Escribir..."></textarea>
           <br>
-          <!--botón que agrega comentario-->
+          <!--botón que agrega comentario invocando la función-->
           <button onclick="enviarComentario();" class="btn btn-success" type="button">Agregar comentario</button> <!--botón "Agregar comentario"-->
-            
+          
         </div>
       </form>
       <br>
@@ -128,28 +118,24 @@
         </label>
         </h5>
         </p>
-      
         <div ALIGN ="center">
           <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_jYTS0r.json"  background="#74BDC7"  speed="1"  style="width: 300px; height: 300px;" hover loop  autoplay></lottie-player>
-
-      <h5 id="relacion-products"></h5>
-
       <br>
       <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Volver a productos</a>
       </div><!--botón Volver a productos-->
   
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
-        </svg></a> <!--Clikeable Volver arriba-->
-        </p>
-        
-        <p>Este sitio forma parte de Desarrollo Web - JAP - 2021</p>
-        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-      </div>
-    </footer>
+      <footer class="text-muted">
+        <div class="container">
+          <p class="float-right">
+           <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+          </svg></a> <!--Clikeable Volver arriba-->
+          </p>
+          
+          <p>Este sitio forma parte de Desarrollo Web - JAP - 2021</p>
+          <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        </div>
+      </footer>
     <div id="spinner-wrapper">
       <div class="lds-ring">
         <div></div>
