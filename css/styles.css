@@ -182,7 +182,7 @@ input[type="radio"]:checked ~ label {
   color: rgb(255, 211, 14);
 }
 
-/*flecha gris*/
+/*flecha gris menú*/
 nav .dropdown-menu:before {
   content: "";
   position: absolute;
@@ -195,8 +195,7 @@ nav .dropdown-menu:before {
   border-color: transparent transparent rgba(109, 102, 102, 0.568);
 }
 
-/* diseño del menu*/
-
+/* diseño del menu de la barra superior*/
 nav .dropdown-menu {
 
   text-align: center;
@@ -204,6 +203,7 @@ nav .dropdown-menu {
   margin-top: 4.5px; /*separacion entre la barra negra y la caja de items*/
   height:44px; /*altura*/
   margin-right: -5px; /*distancia dedsde el margen derecho*/
+  
   
 
   }

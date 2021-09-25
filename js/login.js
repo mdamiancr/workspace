@@ -4,6 +4,7 @@ function verificar(){
     let usuario = {};
     if (nombre.value.trim()===""|| email.value.trim()===""){ 
     alert("Completa los campos porfavor");
+    
 }else {
     usuario.nombre = nombre.value;
     usuario.email = email.value;
@@ -11,6 +12,7 @@ function verificar(){
     location.href="index.html";
     localStorage.setItem("usuario",JSON.stringify(usuario));
     sessionStorage.setItem("usuario", JSON.stringify(usuario));
+    
 }
 }
 
