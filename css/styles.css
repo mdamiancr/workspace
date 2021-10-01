@@ -192,21 +192,20 @@ nav .dropdown-menu:before {
   height: 0;
   border-width: 0 14px 14px; /*tamaño de la flecha*/
   border-style:solid;
-  border-color: transparent transparent rgba(109, 102, 102, 0.568);
+  border-color: transparent transparent #06397041;
+  
 }
 
 /* diseño del menu de la barra superior*/
 nav .dropdown-menu {
 
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.541);
+  background-color: #06397098;
   margin-top: 4.5px; /*separacion entre la barra negra y la caja de items*/
   height:44px; /*altura*/
   margin-right: -5px; /*distancia dedsde el margen derecho*/
-  
-  
-
   }
+  
 
  nav .dropdown-menu li{
   display:initial;
@@ -229,7 +228,7 @@ nav .dropdown-menu {
 
    }
 
-/*color, grosor de linea señaladora carrito, mi perfil y salir*/
+/*color, grosor de linea señaladora botón menú*/
   nav .dropdown-menu li a:hover{
 
      border-bottom: 2px solid rgb(255, 255, 255);
@@ -240,14 +239,31 @@ nav .dropdown-menu {
 .carousel {
   width: 640px; 
   height: 360px; 
-  margin-left: 340px; /*carousel centrado*/
+  margin-left: 340px; /*centrado*/
  }
 
- /* dandole bordes curvos a las imagenes*/
+ /* dandole bordes curvos a las imagenes del carousel*/
  .carousel img{
    border-radius: 10px; 
  }
- /*dandole efectos de zoom al pasar el mouse*/
+ /*dandole efectos de zoom al pasar el mouse products info y categorias*/
  .carousel:hover{-webkit-transform:scale(1.3);transform:scale(1.3) ;transition: .7s} /*se cambió el tiempo de transición*/
  .carousel {overflow:hidden; transition: .5s;} /*tiempo despues del hover*/
  
+
+ /*centrando el texto de los botones (productos) verticalmente*/
+ .btn-light {
+   display:flex;
+   align-items: center;
+   align-content: center;
+ }
+
+ 
+/* alineando el icono cart*/
+ .bi-cart-fill{
+  inline-size: 15px;
+  margin-inline: 2.4px;
+  margin-top: -1mm;
+}
+
+

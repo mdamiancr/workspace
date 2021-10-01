@@ -1178,7 +1178,7 @@ pre code {
 
     .col-md-6 {
         -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
+        margin-left:  600px;
         max-width: 50%
     }
 
@@ -7112,7 +7112,8 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: #343a40 !important
+    background-color: #063970ad !important
+    /*cambio de color en la barra superiro y transparencia*/
 }
 
 a.bg-dark:focus,

@@ -83,7 +83,7 @@
 }
 
 .login input[type="submit"]:hover {
-  background: rgba(38, 152, 218);
+  background: rgba(38, 152, 218, 0.466);
 }
 
 
