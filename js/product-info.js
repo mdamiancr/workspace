@@ -132,6 +132,8 @@ function showRelatedProducts(array) {
                 let Relacionados = array[i];
                 let relatedProduct = productosRelacionados[Relacionados];
 
+             
+
                 htmlContentToAppend += `
 
         <a href=".html" class = "list-group-item list-group-item-action">

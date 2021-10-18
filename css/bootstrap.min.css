@@ -2013,11 +2013,11 @@ pre code {
 .table-hover .table-active:hover>th {
     background-color: rgba(0, 0, 0, .075)
 }
-
+/*color de barra carrito*/
 .table .thead-dark th {
     color: #fff;
-    background-color: #343a40;
-    border-color: #454d55
+    background-color:#06397098;
+    border-color:#06397098;
 }
 
 .table .thead-light th {

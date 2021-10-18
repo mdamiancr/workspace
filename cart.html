@@ -1,77 +1,93 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>eMercado - Todo lo que busques está aquí</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <title>eMercado - Todo lo que busques está aquí</title>
-
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <link href="css/dropzone.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-      </svg></a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a id="usuario" class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
+    <nav class="site-header sticky-top py-1 bg-dark">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+            <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+            <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+            <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+            <a id="usuario"class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
       <ul class="dropdown-menu"role="menu">
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html">Inicio</a></li>
         <li><a href="my-profile.html">Mi perfil</a></li>
         <li><a href="login.html">Salir</a></li>
       </ul>
     </div>
-  </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-center p-4">
+            <h2>Carrito de compras</h2>
+            <p class="lead">Verás aquí los productos seleccionados</p>
+        </div>
+
+        <!--Mostrando productos-->
+        <h4 ALIGN="center" class="mb-3">Productos seleccionados</h4>
+        <br>
+        <br>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Costo</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Subtotal</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="cart-products">
+            </tbody>
+        </table>
+        <br>
+    <div id="spinner-wrapper">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-  </div>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/login.js"></script>
-  <script src="js/logout.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/login.js"></script>
 
 </body>
 
