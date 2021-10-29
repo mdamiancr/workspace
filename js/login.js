@@ -11,7 +11,7 @@ function verificar(){
     usuario.estado = "conectado";
     location.href="index.html";
     localStorage.setItem("usuario",JSON.stringify(usuario));
-    sessionStorage.setItem("usuario", JSON.stringify(usuario));
+    /*sessionStorage.setItem("usuario", JSON.stringify(usuario));*/
     
 }
 }
