@@ -47,24 +47,22 @@ function showProductsList(productsArray){
 
             
     htmlContentToAppend += `
-    <a href="product-info.html" class = "list-group-item list-group-item-action">
-        <div class="row">
-            <div class="col-3">
-                <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-            </div>
-            <div class="col">
-                <div class="d-flex w-100 justify-content-between">
-                    <h4 class="mb-1">`+ product.name +`</h4>
-                    <small class="text-muted">` + product.soldCount + ` vendidos</small>
-                </div>
-                    <p class="mb-1">`+ product.description +`</p>
-                    <p class="mb-1">`+ product.currency +` `+ product.cost +`</p>
-                </div>
-            </div>
-        </div>
-    </a>
-            `
-        }
+    
+    <div class="col-md-4">
+      <a href="product-info.html" class = "card mb-3 custom-card">
+        <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
+        <h4 class="m-3 text-center">`+ product.name +`</h4>
+          <div class="card-body">
+            <p class="text-muted">` + product.soldCount + ` vendidos</p>
+            <p class="mb-1 card-text">`+ product.description +`</p>
+            <p class="mb-1">`+ product.currency +` `+ product.cost +`</p>
+          </div>
+      </a>
+    </div>
+        `
+
+    }
+
 
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
     }

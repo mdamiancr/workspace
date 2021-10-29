@@ -2018,6 +2018,7 @@ pre code {
     color: #fff;
     background-color:#06397098;
     border-color:#06397098;
+    
 }
 
 .table .thead-light th {
@@ -11126,6 +11127,8 @@ a.text-dark:hover {
     .table-bordered td,
     .table-bordered th {
         border: 1px solid #dee2e6 !important
+    
+    
     }
 
     .table-dark {
@@ -11141,7 +11144,11 @@ a.text-dark:hover {
 
     .table .thead-dark th {
         color: inherit;
-        border-color: #dee2e6
+        border-color: #dee2e6;
+        border-radius: 100px;
+    
+      
+        
     }
 }
 

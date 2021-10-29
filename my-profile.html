@@ -4,7 +4,6 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
@@ -31,47 +30,163 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url("https://fondosmil.com/fondo/27126.jpg");
+      background-repeat: inherit;
+      margin-right: -15px;
+    }
+  </style>
+
+  <!--diseño botón subir imagen-->
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<style type="text/css">
+    .fileinput-button {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        margin-left: 580px;
+    }
+ 
+    .fileinput-button input{
+        position:absolute;
+        right: 0px;
+        top: 0px;
+        opacity: 0;
+        font-size: 200px;
+    }
+	</style>
+  <!--fin subir imageb-->
 </head>
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-      </svg></a>
+      <a class="py-2 d-none d-md-inline-block" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22"
+          height="22" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+          <path
+            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+        </svg></a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a id="usuario" class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
       <ul class="dropdown-menu" role="menu">
-
         <li><a href="index.html">Inicio</a></li>
         <li><a href="cart.html">Carrito</a></li>
-        <li><a href="login.html">Salir</a></li>
+        <li><a href="#" onclick="desconectar();">Salir</a></li>
       </ul>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <div id="cajitasuperior">
+  <div id="mititulo">
+    <h2>Mi perfil</h2>
+  </div>
+  <div class="row justify-content-center" id="misubtitulo">
+    <h5>Aquí podrás modificar tus datos personales</h5>
+  </div>
+  </div>
+  <br>
+    <!-- imagen de perfi -->
+  <img id="fotito" src="" height="150" width="150"  style="border-radius: 50%;">
+  <br>
+  <br>
+  <!--button save-->
+  <div>
+    <span class="btn btn-primary fileinput-button">
+        <span> Cambiar imagen de perfil</span>
+        <input onchange="previewFile();" type="file">
+    </span>
+</div>
+<br>
+  <!--button save-->
+  
+  <!-- estructura con la info -->
+<div class="row mt-3 justify-content-center">
+      <div id="htmlUserData" class="col-6">
+      <p id="htmlUserName"  class="generalstyle1">Nombre: </p>
+      <p id="htmlUserSurname" class="generalstyle2">Apellido: </p>
+      <p id="htmlUserAge" class="generalstyle3">Edad: </p>
+      <p id="htmlUserEmail" class="generalstyle4">Email: </p>
+      <p id="htmlUserPhone" class="generalstyle5">Teléfono: </p>
+ </div>
+</div>
+
+  <div class="row justify-content-center">
+  
+    <!-- modal para datos lamando a la funcion -->
+
+  <button type="button" id="editarperfil" class="btn btn-primary my-4" data-toggle="modal"
+  data-target="#userDataModal" onclick="modifyUserData()"> Editar mi perfil</button>
+
+
+
+    <!-- Modal desplegable -->
+    <div class="modal fade" id="userDataModal" tabindex="-1" role="dialog" aria-labelledby="userDataModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userDataModalLabel">Editar información personal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+          </div>
+
+          <!-- columnas e inputs -->
+          <div class="modal-body">
+            <form class="">
+              <div class="row">
+                <div class="form-group col-6">
+                  <label for="userName">Nombre:</label>
+                  <input class="form-control justify-content-cente" type="text" id="userName"
+                    placeholder="Ingrese su nombre" name="nombre">
+                </div>
+
+                <div class="form-group col-6">
+                  <label for="userSurname">Apellido:</label>
+                  <input class="form-control" type="text" id="userSurname" placeholder="Ingrese su apellido "
+                    name="apellido">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-6">
+                  <label for="userAge">Edad:</label>
+                  <input class="form-control" type="text" id="userAge" placeholder="Ingrese su edad" name="edad">
+                </div>
+
+                <div class="form-group col-6">
+                  <label for="userEmail">Correo electrónico:</label>
+                  <input class="form-control" type="text" id="userEmail" placeholder="Ingrese su correo electronico" name="email">
+                </div>
+              </div>
+
+                <div class="row">
+                <div class="form-group col-6">
+                  <label for="userPhone">Numero de teléfono:</label>
+                  <input class="form-control" type="text" id="userPhone" placeholder="Ingrese su número de teléfono"
+                    name="phone">
+                </div>
+              </div>
+            </form>
+          </div>
+
+  
+          <!-- botones de salir sin guardar y guardar -->
+          <div class="modal-footer">
+            <button type="button" id="botonsalir" class="btn btn-secondary" data-dismiss="modal">Salir sin
+              guardar</button>
+            <button type="button" class="btn btn-primary" onclick="saveAndShowUserData()">Guardar cambios</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <footer class="text-muted bg-light">
-    <div class="container">
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <div class="alert fade alert-success" role="alert" id="alertResult">
-    <span id="resultSpan"></span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
   </div>
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
+
       <div></div>
       <div></div>
       <div></div>
@@ -85,6 +200,7 @@
   <script src="js/my-profile.js"></script>
   <script src="js/login.js"></script>
   <script src="js/logout.js"></script>
+
 </body>
 
 </html>

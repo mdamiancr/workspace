@@ -63,7 +63,7 @@ footer p {
   color: white;
 }
 
-/*color de las letras del menu*/
+/*color de las letras del menu desplegable en barra superior*/
 .site-header .dropdown-menu a {
   color: rgb(255, 255, 255);
 }
@@ -182,7 +182,7 @@ input[type="radio"]:checked ~ label {
   color: rgb(255, 211, 14);
 }
 
-/*flecha gris menú*/
+/*flecha azul menú*/
 nav .dropdown-menu:before {
   content: "";
   position: absolute;
@@ -204,9 +204,9 @@ nav .dropdown-menu {
   margin-top: 4.5px; /*separacion entre la barra negra y la caja de items*/
   height:44px; /*altura*/
   margin-right: -5px; /*distancia dedsde el margen derecho*/
+  align-items: center;
   }
   
-
  nav .dropdown-menu li{
   display:initial;
   padding: 15px 21px; /*medidas de la caja*/
@@ -267,3 +267,112 @@ nav .dropdown-menu {
 }
 
 
+/* diseño de mi perfil, titulos y botones*/
+
+#mititulo{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #197ad4;
+  margin-left: 45%;
+  margin-top: 20px;
+}
+
+#misubtitulo{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #197ad4;
+  margin-left: 0%;
+  margin-top: 20px;
+  
+}
+
+#botonsalir{
+  background-color: rgb(59, 177, 5);
+}
+
+#editarperfil{
+  background-color: rgb(59, 177, 5);
+}
+
+/*comienza el diseño de cada item de informacion, uso una ID para cada uno*/
+
+.generalstyle1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #4b4646;
+  margin-left: 70px;
+  height: 50px;
+  width: 500px;
+  background-color: rgba(230, 173, 173, 0.322);
+  text-align-last: center;
+  padding-top: 12px;
+}
+
+.generalstyle2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #4b4646;
+  margin-left: 70px;
+  height: 50px;
+  width: 500px;
+  background-color: rgba(230, 173, 173, 0.233);
+  text-align-last: center;
+  padding-top: 12px;
+}
+
+.generalstyle3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #4b4646;
+  margin-left: 70px;
+  height: 50px;
+  width: 500px;
+  background-color: rgba(230, 173, 173, 0.233);
+  text-align-last: center;
+  padding-top: 12px;
+
+}
+.generalstyle4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #4b4646;
+  margin-left: 70px;
+  height: 50px;
+  width: 500px;
+  background-color: rgba(230, 173, 173, 0.308);
+  text-align-last: center;
+  padding-top: 12px;
+
+}
+.generalstyle5{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #4b4646;
+  margin-left: 70px;
+  height: 50px;
+  width: 500px;
+  background-color: rgba(192, 127, 29, 0.151);
+  text-align-last: center;
+  padding-top: 12px;
+}
+
+/*dandole forma de circulo a la foto de perfil*/
+
+
+
+/*fondo gris para titulo y subtitulo de mi perfil*/
+#cajitasuperior{
+  background-color: rgba(185, 201, 37, 0.322);
+  height: 150px;
+  padding-top: 20px;
+  margin-right:0px;
+  
+}
+
+#fotito{
+  margin-left: 44.7%;
+}
+
+#random{
+  border-radius: 1em;
+  border-collapse: collapse;
+  overflow:hidden;
+}
