@@ -7,11 +7,11 @@
 }
 
 .jumbotron {
-  height: 50vh;
+  height: 25vh;
   padding: 5em inherit;
   margin-bottom: 0;
-  background-color: #197ad4;
-  background: url('../img/cover_back.png');
+  background-color: #197ad40e;
+  background: url('../img/portada-p.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -173,14 +173,39 @@ input[type="radio"] {
 label {
   color: grey;
 }
-label:hover,
-label:hover ~ label {
+.hoverstar h5:hover,
+.hoverstar:hover ~ h5 {
   color: rgb(255, 211, 14);
 }
 
-input[type="radio"]:checked ~ label {
+.hoverstar h5{
+  color: #817f7f;
+}
+
+.clasificacion input[type="radio"]:checked ~ label {
   color: rgb(255, 211, 14);
 }
+
+.clasificacion input:hover  ~ label{
+  color: rgb(255, 211, 14);
+}
+
+.clasificacion label:hover{
+  animation: rotateIn;
+  animation-duration: 0.7s;
+}
+
+.clasificacion label{
+  float:right;
+}
+
+.clasificacion{
+  float:left;
+}
+
+
+
+
 
 /*flecha azul menú*/
 nav .dropdown-menu:before {
@@ -270,15 +295,15 @@ nav .dropdown-menu {
 /* diseño de mi perfil, titulos y botones*/
 
 #mititulo{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #197ad4;
+  font-family: Arial Narrow Bold, Arial, Helvetica, sans-serif;
+  color: #000000;
   margin-left: 45%;
   margin-top: 20px;
 }
 
 #misubtitulo{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #197ad4;
+  font-family: Arial Narrow Bold, Arial, Helvetica, sans-serif;
+  color: #040505;
   margin-left: 0%;
   margin-top: 20px;
   
@@ -354,25 +379,41 @@ nav .dropdown-menu {
   padding-top: 12px;
 }
 
-/*dandole forma de circulo a la foto de perfil*/
-
-
 
 /*fondo gris para titulo y subtitulo de mi perfil*/
 #cajitasuperior{
-  background-color: rgba(185, 201, 37, 0.322);
+  background-color: rgba(255, 169, 9, 0);
   height: 150px;
   padding-top: 20px;
   margin-right:0px;
   
+  
 }
 
+/*centrado de la foto de perfil*/
 #fotito{
   margin-left: 44.7%;
 }
+
 
 #random{
   border-radius: 1em;
   border-collapse: collapse;
   overflow:hidden;
 }
+
+/*banner para mi perfik*/
+#profilebanner {
+  height: 35vh;
+  padding: 5em inherit;
+  margin-bottom: 0;
+  background-color: #197ad40e;
+  background: url('../img/banner-profile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  font-weight: bold;
+  margin-top: -95px;
+}
+

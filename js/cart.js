@@ -50,7 +50,6 @@ function addEventCount() {
 
     }
 
-
 }
 
 
@@ -62,6 +61,8 @@ function eraseProduct(btn) {
     parent.removeChild(product);
     addEventCount();
 }
+
+
 
 function showCartArticles(articles) {
     let HTMLcont = "";

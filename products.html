@@ -17,6 +17,14 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+ <!--imagen de fondo body-->
+ <style>
+  body {
+    background-image: url("https://fondosmil.com/fondo/27126.jpg");
+    background-repeat: inherit;
+    margin-right: -15px;
+  }
+</style>
 </head>
 
 <body>
@@ -31,19 +39,19 @@
       <ul class="dropdown-menu" role="menu">
         <li><a href="cart.html">Carrito</a></li>
         <li><a href="my-profile.html">Mi perfil</a></li>
-        <li><a href="login.html">Salir</a></li>
+        <li><a href="#" onclick="desconectar();">Salir</a></li>
       </ul>
     </div>
   </nav>
   <br>
-  <div ALIGN="center"><lottie-player src="https://assets10.lottiefiles.com/packages/lf20_TMRZ23.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player></div>
+  <div ALIGN="center"><lottie-player src="https://assets4.lottiefiles.com/packages/lf20_IcvJ1B.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
     <main role="main" class="pb-5">
     <div class="text-center p-4">
       <h2>Productos</h2>
       <p class="lead">Verás aquí todas los productos del sitio.</p>
     </div>
     <!---Botones min y máx-->
-    <div class="container">
+    <div class="container" style="margin-left:-470px; margin-bottom: -55px;">
       <div class="row">
         <div class="col text-right">
           <div class="btn-group btn-group toggle mb-10" data-toggle="buttons">
@@ -85,7 +93,7 @@
     </div>
   </div>
   <br>
-  <div class="album py-5 bg-light">
+  <div class="album py-5">
     <div class="container">
       <div class="row" id="prod-list-container">
       </div>

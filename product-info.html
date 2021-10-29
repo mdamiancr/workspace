@@ -8,6 +8,7 @@
   <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="101317660375-qdtjsg4d63cf38vlmsb54gqdr2i3pagh.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    
   <title>eMercado - Todo lo que busques está aquí</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
@@ -16,7 +17,16 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!--imagen de fondo body-->
+  <style>
+    body {
+      background-image: url("https://fondosmil.com/fondo/27126.jpg");
+      background-repeat: inherit;
+      margin-right: -15px;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,13 +41,14 @@
       <ul class="dropdown-menu" role="menu">
         <li><a href="cart.html">Carrito</a></li>
         <li><a href="my-profile.html">Mi perfil</a></li>
-        <li><a href="login.html">Salir</a></li>
+        <li><a href="#" onclick="desconectar();">Salir</a></li>
       </ul>
     </div>
   </nav>
   <br>
   <br>
-  <div ALIGN="center"><dotlottie-player src="https://assets5.lottiefiles.com/dotlotties/dlf10_dA2Uqv.lottie"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></dotlottie-player></div>
+  <div ALIGN="center">
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_w5ys0tms.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player></div>
   <main role="main">
     <div class="container mt-5">
       <div class="text-center p-4">
@@ -111,52 +122,56 @@
     <br>
     <br>
     <!--caja de comentarios y puntuación en el mismo form (se sumaron lineas separadoras hr %)-->
-    <divhr class="my-3">
-      </div>
+    <div class="my-3">
       <div class="container">
         <br>
-        <form><label>
+        <form>
+          <span class="hoverstar">
             <br>
             <h5>Valora este producto:</h5>
-          </label>
-          <class="clasificacion">
+          </span>
+          <div class="clasificacion">
             <h2>
-              <input id="radio1" type="radio" name="estrella" value="5">
-              <label for="radio1">★</label>
-              <input id="radio2" type="radio" name="estrella" value="4">
-              <label for="radio2">★</label>
+              <input id="radio5" type="radio" name="estrella" value="5">
+              <label for="radio5">★</label>
+              <input id="radio4" type="radio" name="estrella" value="4">
+              <label for="radio4">★</label>
               <input id="radio3" type="radio" name="estrella" value="3">
               <label for="radio3">★</label>
-              <input id="radio4" type="radio" name="estrella" value="2">
-              <label for="radio4">★</label>
-              <input id="radio5" type="radio" name="estrella" value="1">
-              <label for="radio5">★</label>
-            </h2><div><a href="cart.html"class="btn btn-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+              <input id="radio2" type="radio" name="estrella" value="2">
+              <label for="radio2">★</label>
+              <input id="radio1" type="radio" name="estrella" value="1">
+              <label for="radio1">★</label>
+            </h2>
+          </div>
+          <br>
+          <br>
+            
+            <div><a href="cart.html"class="btn btn-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
               <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </svg>Añadir al carrito</a>
+            </svg>Añadir al carrito</a></div>
 
               <!--box comentario-->
               <br>
               <br>
-              <br>
-              <br>
-              <label>
+
+              
+              <span class="hoverstar">
                 <h5>Escribe un comentario</h5>
-              </label>
+              </span>
               <!--escribir el comentario-->
               <textarea id="texto" class="form-control" autocomplete="off" placeholder="Escribir..."></textarea>
               <br>
               <!--botón que agrega comentario invocando la función-->
               <button onclick="enviarComentario();" class="btn btn-success" type="button">Agregar comentario</button>
               <!--botón "Agregar comentario"-->
-
             </div>
         </form>
         <br>
         <br>
         <p>
-          <!--Parrafo comentarios con icono de globo txt-->
-        <h5><label>Comentarios <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        <!--Parrafo comentarios con icono de globo txt-->
+        <h5 style="margin-left: 45px;"><label>Comentarios <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
               class="bi bi-chat-square-dots" viewBox="0 0 16 16">
               <path
                 d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
@@ -169,13 +184,12 @@
         <!--fin de comentarios -->
 
         <!-- ID con comentarios predefinidos-->
-        <div class="table table-bordered table-hover" id="comments"></div>
-
+        <div  class="table table-hover pl-5 pr-5 pb-5" id="comments"></div>
         <br>
         <p>
           <!--Parrafo productos relacionados con icono de  similar txt-->
 
-        <h5><label>Productos relacionados <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        <h5 style="margin-left: 45px;"><label>Productos relacionados<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
               fill="currentColor" class="bi bi-upc-scan" viewBox="0 0 16 16">
               <path
                 d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5zM3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
@@ -185,10 +199,7 @@
         </p>
       
         
-        <div class="container-fluid">
-          <div class="row" id="relatedProductsInfo">
-          </div>
-      </div>
+      <div class="container-fluid pl-5 pr-5 pb-5" id="relatedProductsInfo"></div>
 
         <footer class="text-muted">
           <div class="container">

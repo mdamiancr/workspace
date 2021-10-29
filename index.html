@@ -16,7 +16,15 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link href="js/main.js" rel="stylesheet">
+
+    <style>
+      body {
+        background-image: url("https://fondosmil.com/fondo/27126.jpg");
+        background-repeat: inherit;
+        margin-right: -15px;
+      }
+    </style>
+
   </head>
   <body>
     <nav class="site-header sticky-top py-1 bg-dark">
@@ -28,17 +36,18 @@
       <ul class="dropdown-menu"role="menu">
         <li><a href="cart.html">Carrito</a></li>
         <li><a href="my-profile.html">Mi perfil</a></li>
-        <li><a href="login.html">Salir</a></li>
+        <li><a href="#" onclick="desconectar();">Salir</a></li>
       </ul>
       </div>
     </nav>
     <main role="main">
       <section class="jumbotron text-center">
         <div class="m-5">
-          <h1></h1>
         </div>
       </section>
-      <div class="album py-5 bg-light">
+
+
+      <div class="album py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
@@ -96,9 +105,10 @@
                 </a>
             </div>
           </div>
-          <div class="row">
-              <a type="button" class="btn btn-light btn-lg btn-block" href="categories.html">Ver todas</a>
+          <div class="row";>
+              <a type="button" style="margin-left: 450px; background-color: rgb(18, 149, 209);" class="btn btn-light btn-lg" href="categories.html">Ver todas las categorías</a>
           </div>
+
         </div>
       </div>
     </main>

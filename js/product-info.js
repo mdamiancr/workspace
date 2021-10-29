@@ -136,7 +136,7 @@ function showRelatedProducts(array) {
 
                 htmlContentToAppend += `
 
-        <a href="products.html" class = "list-group-item list-group-item-action">
+        <a href="products.html" class ="list-group-item list-group-item-action">
         <div class="row">
             <div class="col-3">
                 <img src="` + relatedProduct.imgSrc + `" alt=" " class="img-thumbnail">
