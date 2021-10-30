@@ -64,7 +64,7 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
+<nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22"
           height="22" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
@@ -75,11 +75,13 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>  
       <a id="usuario" class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
-      <ul class="dropdown-menu" role="menu">
+      <div><img  alt="" id="miniatura" width="35px" height="35px" style="border-radius: 50px;"></div>
+        <ul class="dropdown-menu" role="menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="cart.html">Carrito</a></li>
         <li><a href="#" onclick="desconectar();">Salir</a></li>
       </ul>
+
   </nav>
 
   <main role="main">
@@ -148,12 +150,12 @@
                 <div class="form-group col-6">
                   <label for="userName">Nombre:</label>
                   <input class="form-control justify-content-cente" type="text" id="userName"
-                    placeholder="Ingrese su nombre" name="nombre">
+                   autocomplete="off" placeholder="Ingrese su nombre" name="nombre">
                 </div>
 
                 <div class="form-group col-6">
                   <label for="userSurname">Apellido:</label>
-                  <input class="form-control" type="text" id="userSurname" placeholder="Ingrese su apellido "
+                  <input class="form-control" type="text" id="userSurname" autocomplete="off" placeholder="Ingrese su apellido "
                     name="apellido">
                 </div>
               </div>
@@ -161,19 +163,19 @@
               <div class="row">
                 <div class="form-group col-6">
                   <label for="userAge">Edad:</label>
-                  <input class="form-control" type="text" id="userAge" placeholder="Ingrese su edad" name="edad">
+                  <input class="form-control" type="text" id="userAge" autocomplete="off" placeholder="Ingrese su edad" name="edad">
                 </div>
 
                 <div class="form-group col-6">
                   <label for="userEmail">Correo electrónico:</label>
-                  <input class="form-control" type="text" id="userEmail" placeholder="Ingrese su correo electronico" name="email">
+                  <input class="form-control" type="text" id="userEmail" autocomplete="off" placeholder="Ingrese su correo electronico" name="email">
                 </div>
               </div>
 
                 <div class="row">
                 <div class="form-group col-6">
                   <label for="userPhone">Numero de teléfono:</label>
-                  <input class="form-control" type="text" id="userPhone" placeholder="Ingrese su número de teléfono"
+                  <input class="form-control" type="text" id="userPhone"autocomplete="off" placeholder="Ingrese su número de teléfono"
                     name="phone">
                 </div>
               </div>

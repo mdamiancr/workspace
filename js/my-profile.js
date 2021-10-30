@@ -1,4 +1,4 @@
-/* Definicion de var constantes */
+/* Definicion de  constantes para formulario */
 const userName = document.getElementById("userName");
 const userSurname = document.getElementById("userSurname");
 const userAge = document.getElementById("userAge");
@@ -21,12 +21,12 @@ function saveUserData() {
         image: userAvatar.src,
     };
 
-    //Se convierte objeto javascript en JSON
-    let userDataJSON = JSON.stringify(userDataObj);
+//Se convierte objeto javascript en JSON
+let userDataJSON = JSON.stringify(userDataObj);
 
-    //Se guarda en LocalStorage los valores de los inputs.
+//Se guarda en LocalStorage los valores de los inputs.
 
-    localStorage.setItem("userData", userDataJSON);
+localStorage.setItem("userData", userDataJSON);
 
 }
 
@@ -44,6 +44,8 @@ function showUserData() {
     document.getElementById("htmlUserEmail").innerHTML += userDataParse.email
     document.getElementById("htmlUserPhone").innerHTML += userDataParse.phone
     document.getElementById("fotito").src = userDataParse.image;
+    //agregué esta línea con id diferente para la nav
+    document.getElementById("miniatura").src = userDataParse.image;
 }
 
 function saveAndShowUserData(){
@@ -55,12 +57,16 @@ function saveAndShowUserData(){
 
 document.addEventListener("DOMContentLoaded", function(e){
     
-    document.getElementById("fotito").src = "img/perfil.jpg";
+    document.getElementById("fotito").src = "img/perfil.jpg"; //imagen de perfil grande
+    document.getElementById("miniatura").src = "img/perfil.jpg"; //miniatura
 
     showUserData();
 });
 
 /*fin formulario modal*/
+
+
+
 
 /*funcion que convirte imagen en  base64*/
 
