@@ -9,6 +9,7 @@ const userAvatar = document.getElementById("fotito");
 
 
 
+
 /* Guarda los datos ingresados en el formulario */
 function saveUserData() {
     // Se crea un objeto 
@@ -44,8 +45,10 @@ function showUserData() {
     document.getElementById("htmlUserEmail").innerHTML += userDataParse.email
     document.getElementById("htmlUserPhone").innerHTML += userDataParse.phone
     document.getElementById("fotito").src = userDataParse.image;
-    //agregué esta línea con id diferente para la nav
-    document.getElementById("miniatura").src = userDataParse.image;
+    //agregué esta línea con id diferente para miniatura nav
+   // document.getElementById("miniatura").src = userDataParse.image;//
+
+    
 }
 
 function saveAndShowUserData(){
@@ -58,7 +61,8 @@ function saveAndShowUserData(){
 document.addEventListener("DOMContentLoaded", function(e){
     
     document.getElementById("fotito").src = "img/perfil.jpg"; //imagen de perfil grande
-    document.getElementById("miniatura").src = "img/perfil.jpg"; //miniatura
+    //document.getElementById("miniatura").src = "img/perfil.jpg"; //miniatura//
+    
 
     showUserData();
 });

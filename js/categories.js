@@ -134,3 +134,11 @@ document.addEventListener("DOMContentLoaded", function(e){
         showCategoriesList();
     });
 });
+
+
+
+
+
+
+
+//prueba imagen miniatira de perfil

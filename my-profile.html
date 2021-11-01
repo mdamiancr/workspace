@@ -11,7 +11,7 @@
   <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <title>eMercado - Todo lo que busques está aquí</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
@@ -41,6 +41,8 @@
       margin-right: -15px;
     }
   </style>
+
+
 
   <!--diseño botón subir imagen-->
   <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
@@ -75,7 +77,6 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>  
       <a id="usuario" class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
-      <div><img  alt="" id="miniatura" width="35px" height="35px" style="border-radius: 50px;"></div>
         <ul class="dropdown-menu" role="menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="cart.html">Carrito</a></li>
@@ -97,9 +98,8 @@
     <h5>Aquí podrás modificar tus datos personales</h5>
   </div>
   </div>
-  <br>
     <!-- imagen de perfi -->
-  <img id="fotito" src="" height="150" width="150"  style="border-radius: 50%;">
+  <img id="fotito" class="profile-effect"src="" height="150" width="150"  style="border-radius: 50%;">
   <br>
   <br>
   <!--button save-->
@@ -115,7 +115,7 @@
   <!-- estructura con la info -->
 <div class="row mt-3 justify-content-center">
       <div id="htmlUserData" class="col-6">
-      <p id="htmlUserName"  class="generalstyle1">Nombre: </p>
+      <p id="htmlUserName" class="generalstyle1">Nombre: </p>
       <p id="htmlUserSurname" class="generalstyle2">Apellido: </p>
       <p id="htmlUserAge" class="generalstyle3">Edad: </p>
       <p id="htmlUserEmail" class="generalstyle4">Email: </p>
