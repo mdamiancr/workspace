@@ -19,14 +19,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <!--imagen de fondo body-->
-  <style>
-    body {
-      background-image: url("https://fondosmil.com/fondo/27126.jpg");
-      background-repeat: inherit;
-      margin-right: -15px;
-    }
-  </style>
+  
 </head>
 
 <body>
@@ -160,7 +153,9 @@
                 <h5>Escribe un comentario</h5>
               </span>
               <!--escribir el comentario-->
-              <textarea id="texto" class="form-control" autocomplete="off" placeholder="Escribir..."></textarea>
+              <div class="md-form amber-textarea active-amber-textarea">
+              <textarea id="texto" class="md-textarea form-control" autocomplete="off"></textarea>
+              </div>
               <br>
               <!--botón que agrega comentario invocando la función-->
               <button onclick="enviarComentario();" class="btn btn-success" type="button">Agregar comentario</button>
@@ -184,7 +179,9 @@
         <!--fin de comentarios -->
 
         <!-- ID con comentarios predefinidos-->
-        <div  class="table table-hover pl-5 pr-5 pb-5" id="comments"></div>
+  
+        <div class="table table-hover pl-5 pr-5 pb-5" id="comments"></div>
+  
         <br>
         <p>
           <!--Parrafo productos relacionados con icono de  similar txt-->

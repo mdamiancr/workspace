@@ -84,17 +84,19 @@ document.addEventListener("DOMContentLoaded", function () {
 //funcion publicar comentario propio
 function enviarComentario() {
     let comentario = {};
-    let usuario = JSON.parse(localStorage.getItem('usuario'))//tomo los datos almacenados en #usuario
+    let usuario = JSON.parse(localStorage.getItem('usuario'))//tomo los datos almacenados en #usuariO
     let estrella = document.querySelector("input[name=estrella]:checked").value;
     if (estrella > 0) {
         estrella;
     };
-
+    
+    
     comentario.user = usuario.nombre;
     comentario.score = estrella;
     comentario.description = document.getElementById("texto").value;
     comentario.dateTime = new Date(); //objeto fecha
     if (comentario.description.trim() !== "") {
+
         comentar.push(comentario); // agrego el comentario
         document.getElementById("texto").value = ""; //borrando campo de comentario
     }

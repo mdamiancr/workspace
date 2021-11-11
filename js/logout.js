@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 	let usuario = JSON.parse(localStorage.getItem("usuario"));
 	if(usuario !== null){
-	document.getElementById("usuario").innerHTML="Hola" +" "+ usuario.nombre + `<img src="" alt="" class="miniatura">`;
+	document.getElementById("usuario").innerHTML= usuario.nombre + `<img src="" alt="" class="miniatura">`;
 	}else{
 		location.href="login.html";
 	}

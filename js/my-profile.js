@@ -61,8 +61,6 @@ function saveAndShowUserData(){
 document.addEventListener("DOMContentLoaded", function(e){
     
     document.getElementById("fotito").src = "img/perfil.jpg"; //imagen de perfil grande
-    //document.getElementById("miniatura").src = "img/perfil.jpg"; //miniatura//
-    
 
     showUserData();
 });

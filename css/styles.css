@@ -187,12 +187,13 @@ label {
 }
 
 .clasificacion input:hover  ~ label{
-  color: rgb(255, 211, 14);
+  color: rgb(216, 183, 35);
 }
 
 .clasificacion label:hover{
   animation: rotateIn;
   animation-duration: 0.7s;
+  border-color: black;
 }
 
 .clasificacion label{
@@ -212,7 +213,7 @@ nav .dropdown-menu:before {
   content: "";
   position: absolute;
   top: -12px;
-  left: 140px;
+  left: 135px;
   width: 0;
   height: 0;
   border-width: 0 14px 14px; /*tamaño de la flecha*/
@@ -410,14 +411,12 @@ nav .dropdown-menu {
   height: 35vh;
   padding: 5em inherit;
   margin-bottom: 0;
-  background-color: #197ad40e;
   background: url('../img/banner-profile.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: black;
   font-weight: bold;
-  margin-top: -95px;
+  margin-top: -101px;
 }
 
 /*edición de la miniatura*/
@@ -430,10 +429,55 @@ nav .dropdown-menu {
 }
 
 
-/*efecto para imagen de perfil*/
+/*efecto para imagen de perfil (gira y se cae)*/
 .profile-effect:hover{
   animation:hinge;
   animation-duration: 4.7s;
 
 }
 
+
+/*diseño para textarea de products-info*/
+#texto{
+  border-color: rgb(79, 160, 214);
+  background-color: rgba(132, 148, 148, 0);
+  border-right: rgba(139, 0, 139, 0);
+  border-left: rgba(139, 0, 139, 0);
+  border-top: rgba(148, 0, 211, 0);
+}
+
+.close{
+  background-color: rgb(21, 88, 156);
+}
+
+#cartbanner {
+  height: 35vh;
+  padding: 5em inherit;
+  margin-bottom: 0;
+  background-color: #197ad40e;
+  background: url('../img/cart-banner-dos.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  font-weight: bold;
+  margin-top: -101px;
+}
+
+#categorybanner {
+  height: 35vh;
+  padding: 5em inherit;
+  margin-bottom: 0;
+  background-color: #197ad40e;
+  background: url('../img/banner-category.jpg');
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  color: black;
+  font-weight: bold;
+  margin-top: -101px;
+}
+
+.fondo{
+  background-color: #998c8c2c;
+}

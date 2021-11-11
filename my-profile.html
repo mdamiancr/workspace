@@ -34,13 +34,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
-  <style>
-    body {
-      background-image: url("https://fondosmil.com/fondo/27126.jpg");
-      background-repeat: inherit;
-      margin-right: -15px;
-    }
-  </style>
+  
 
 
 
@@ -82,15 +76,16 @@
         <li><a href="cart.html">Carrito</a></li>
         <li><a href="#" onclick="desconectar();">Salir</a></li>
       </ul>
+</nav>
 
-  </nav>
-
-  <main role="main">
+    <main role="main">
     <section id="profilebanner">
       <div class="m-5"></div>
     </section>
 
-  <div id="cajitasuperior">
+
+  <section class="fondo">
+  <div id="cajitasuperior"><!--se cambió por la imagen de banner-->
   <div id="mititulo">
     <h2>Mi perfil</h2>
   </div>
@@ -123,6 +118,7 @@
  </div>
 </div>
 
+
   <div class="row justify-content-center">
   
     <!-- modal para datos lamando a la funcion -->
@@ -130,6 +126,7 @@
   <button type="button" id="editarperfil" class="btn btn-primary my-4" data-toggle="modal"
   data-target="#userDataModal" onclick="modifyUserData()"> Editar mi perfil</button>
 
+  </section>
 
 
     <!-- Modal desplegable -->

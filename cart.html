@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="101317660375-qdtjsg4d63cf38vlmsb54gqdr2i3pagh.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
     <title>eMercado - Todo lo que busques está aquí</title>
+
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
@@ -22,7 +22,7 @@
             -ms-user-select: none;
             user-select: none;
         }
-        
+
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -37,66 +37,329 @@
 <body>
     <nav class="site-header sticky-top py-1 bg-dark">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2 d-none d-md-inline-block" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22"
-                height="22" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                <path
-                  d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
-              </svg></a>
+            <a class="py-2 d-none d-md-inline-block" href="index.html"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="22" height="22" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                </svg></a>
             <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
             <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
             <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-            <a id="usuario"class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
-      <ul class="dropdown-menu"role="menu">
-        <li><a href="login.html">Inicio</a></li>
-        <li><a href="my-profile.html">Mi perfil</a></li>
-        <li><a href="#" onclick="desconectar();">Salir</a></li>
-      </ul>
-    </div>
+            <a id="usuario" class="py-2 d-none d-md-inline-block" href="" data-toggle="dropdown"></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="cart.html">Carrito</a></li>
+                <li><a href="my-profile.html">Mi perfil</a></li>
+                <li><a href="#" onclick="desconectar();">Salir</a></li>
+            </ul>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="text-center p-4">
-            <h2>Carrito de compras</h2>
-            <p class="lead">Verás aquí los productos seleccionados</p>
+    <main role="main">
+        <section id="cartbanner">
+            <div class="m-5"></div>
+        </section>
+
+        <div class="container">
+            <div class="text-center p-4">
+                <h2>Carrito de compras</h2>
+            </div>
+
+            <!--Mostrar productos-->
+            <h4 style="text-align: center;" lass="mb-3">Productos seleccionados</h4>
+            <br>
+
+            <!--Tabla superior-->
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Costo</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+
+                <!--Muestro los productos precargados-->
+                <tbody id="cart-products">
+                </tbody>
+            </table>
+            <br>
+            <hr>
+
+        <!--Tipo de envío-->
+            <div class="col-12">
+                <div class="row">
+                    <div class="d-block my-3 col-4">
+                        <h4 class="mb-3">Dirección de entrega</h4>
+
+
+                        <!-- botón del modal -->
+
+                        <button id="btnSelectAddress" style="background-color: green;" type="button"
+                            class="btn btn-primary" data-toggle="modal" data-target="#modalShippingAdress">Ingresar
+                            dirección de entrega</button>
+
+                        <!--comienzo de modal dirección de envío-->
+                        <div class="modal fade" id="modalShippingAdress" tabindex="-1" role="dialog"
+                            aria-labelledby="Dirección de entrega" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+
+                                        <h4 class="modal-title" id="exampleModalLongTitle">Dirección de entrega</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="shippingDetails" d-flex align-items-stretch>
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="shippingAddress">Calle</label>
+                                                    <input type="text" class="form-control" id="shippingAddress"
+                                                        placeholder="Ingrese la calle" value="" autocomplete="off">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="shippingAddressNum">Número de puerta</label>
+                                                    <input type="text" class="form-control" id="shippingAddressNum"
+                                                        placeholder="Nro. puerta" value="">
+                                                </div>
+
+
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="shippingAddressNumApto">Apto.</label>
+                                                    <input type="text" class="form-control" id="shippingAddressNumApto"
+                                                        placeholder="Apto." value="">
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="shippingCountry">Departamento</label>
+                                                    <select class="custom-select d-block w-100"
+                                                        id="shippingDepartament">
+                                                        <option value="">Seleccionar destino</option>
+                                                        <option value="MO">Montevideo</option>
+                                                        <option value="CO">Colonia</option>
+                                                        <option value="MA">Maldonado</option>
+                                                        <option value="RO">Rocha</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                                    onclick="clearShippingAddress()">Cancelar y limpiar</button>
+                                                <button type="button" class="btn btn-primary" id="btnSaveAddress"
+                                                    onclick="verifyShippingAddress()">Guardar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--selecciona tipo de envío-->
+                    <div class="d-block my-2 col-3">
+                        <h4 class="col-6 mb-3">Seleccionar tipo de envío</h4>
+                        <div class="custom-control custom-radio">
+                            <input id="premiumShipping" name="shipping" type="radio" class="custom-control-input"
+                                required="" value="15" onclick="calcShippingCost()">
+
+                            <label class="custom-control-label" for="premiumShipping">Premium (2-5 días) - Costo del 15%
+                                sobre el subtotal.</label></div>
+
+
+                        <div class="custom-control custom-radio">
+                            <input id="expressShipping" name="shipping" type="radio" class="custom-control-input"
+                                required="" value="7" onclick="calcShippingCost()">
+                            <label class="custom-control-label" for="expressShipping">Express (5-8 días) - Costo del
+                                7% sobre el subtotal.</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input id="standardShipping" name="shipping" type="radio" class="custom-control-input"
+                                required="" value="5" onclick="calcShippingCost()">
+                            <label class="custom-control-label" for="standardShipping">Standard (12 a 15 días) -
+                                Costo del 5% sobre el subtotal.</label>
+                        </div>
+                    </div>
+
+                    <!--seleccionando metodo de pago-->
+
+                    <div style="margin-left: 180px;" class="d-block align-items-start my-2 col-3">
+                        <h4 class="mb-3">Método de pago</h4>
+
+                        <p class="mb-3">Pagar con tarjeta de crédito ó débito u transferencia bancaria &nbsp;
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-diners-club"></i>
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fas fa-university"></i></p>
+                            
+
+                        <!-- botón modal método de pago-->
+                        <button id="btnPaymentOptions" type="button" style="background-color: green;"
+                            class="btn btn-secondary"  data-toggle="modal" data-target="#modalPaymentMethod">Seleccione
+                            un método de pago</button>
+
+
+
+                        <!-- Modal método de pago-->
+                        <div class="modal fade" id="modalPaymentMethod" data-backdrop="static" data-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Método de pago</h5>
+                                    </div>
+
+                                    <div class="modal-body p-5">
+                                        <form action="" id="formPaymentMethod">
+                                            <div class="row">
+                                                <div class="custom-control custom-radio col-md-12 mb-3">
+                                                    <input id="cardPayment" name="paymentmethod" type="radio"
+                                                        class="custom-control-input" onclick="disableBankPayment()">
+                                                    <label class="custom-control-label" for="cardPayment"> Tarjeta de
+                                                        crédito</label>
+                                                </div>
+
+                                                <div class="col-md-12 mb-3"><label for="cardNumber">Número de
+                                                        tarjeta</label>
+                                                    <input type="text" class="form-control cardNumber" id="cardNumber"
+                                                        placeholder="Ingrese el número de la tarjeta" value=""
+                                                        minlength="16" maxlength="16" required pattern="[0-9]{16}"
+                                                        title="Debe ingresar únicamente números [0-9]">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-8 mb-3">
+                                                    <label><span class="hidden-xs">Vencimiento</span></label>
+                                                    <div class="input-group">
+                                                        <input id="inputcardExpMonth" type="number" class="form-control"
+                                                            placeholder="MM" name="" min="01" max="12" required>
+                                                        <input id="inputcardExpYear" type="number" class="form-control"
+                                                            placeholder="YY" name="" min="20" maxlength="2" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="cardcvv">CVV</label>
+                                                    <input type="text" class="form-control" id="cardcvv"
+                                                        placeholder="CVV" value="" minlength="3" maxlength="3" required
+                                                        pattern="[0-9]{3}"
+                                                        title="Debe ingresar  el código de 3 dígitos al dorso de la tarjeta. Unicamente números [0-9]">
+                                                </div>
+                                            </div>
+                                            <hr>
+
+
+                                            <div class="row">
+                                                <div class="custom-control custom-radio col-md-8 mb-3">
+                                                    <input id="bankPayment" name="paymentmethod" type="radio"
+                                                        class="custom-control-input" onclick="disableCardPayment()">
+                                                    <label class="custom-control-label" for="bankPayment">Transferencia
+                                                        bancaria</label>
+                                                </div>
+
+
+
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="accountNumber">Número de cuenta</label>
+                                                    <input type="text" class="form-control" id="accountNumber"
+                                                        placeholder="Ingrese el número de cuenta bancaria" value=""
+                                                        minlength="10" maxlength="10" required pattern="[0-9]{10}"
+                                                        title="Ingrese los 10 dígitos de su cuenta bancaria. Unicamente números [0-9]">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                                    onclick="clearPaymentMethod()">Cerrar y limpiar</button>
+                                                <button id="btnSubmitPaymentMethod" type="button"
+                                                    class="btn btn-primary"
+                                                    onclick="verifyPaymentMethod()">Guardar</button>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!--cuadro que muestra costos-->
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 align-self-center">
+                    <h4 class="mb-3 text-center">Costos</h4>
+
+                    <ul class="list-group mb-3">
+                        <!-- subtotal -->
+                        <li class="list-group-item justify-content-between d-flex">
+                            <h5>Subtotal<br>
+                                <small class="text-muted">Costo total de los productos seleccionados</small>
+                            </h5>
+                            <span id="subtotalCost"> - </span>
+                        </li>
+
+
+                        <!-- Costo de envío -->
+                        <li class="list-group-item justify-content-between d-flex">
+                            <h5>Costo de envío <br>
+                                <small class="text-muted">Varía según el tipo de envío seleccionado</small>
+                            </h5>
+                            <span id="shippingCost"> - </span>
+                        </li>
+
+                        <!-- Precio total -->
+                        <li class=" list-group-item justify-content-between d-flex ">
+                            <h5>Total </h5>
+                            <span id="totalCost" style="font-weight:bold"></span>
+                        </li>
+                    </ul>
+
+                      <!--botón finalizar compra-->
+                    <div class="justify-content-center d-flex">
+                        <div class="d-inline-flex my-3 ">
+                            <button id="btnBuyCart" type="button" class="btn btn-primary" onclick="buyProducts()">
+                                Finalizar compra<i class="button" aria-hidden="true"></i>
+                            </button>
+
+                 
+                            <div class="alert alert-info fade out" id="alertBuy">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong>Compra exitosa!</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!--Mostrando productos-->
-        <h4 ALIGN="center" class="mb-3">Productos seleccionados</h4>
-        <br>
-        <br>
-        <table id="random" class="table">
-            <thead  class="thead-dark">
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Costo</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Subtotal</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody id="cart-products">
-            </tbody>
-        </table>
-        <hr>
-        <br>
-    <div id="spinner-wrapper">
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div id="spinner-wrapper">
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-    </div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/dropzone.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/logout.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/login.js"></script>
 
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/dropzone.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/logout.js"></script>
+        <script src="js/cart.js"></script>
 </body>
 
 </html>
